@@ -1,0 +1,14 @@
+/* Mobile controls overlay for Eaglercraft on iPhone */
+#mobile-controls{position:fixed;left:0;right:0;bottom:0;top:0;pointer-events:none;font-family:Inter,system-ui,Arial}
+.mc-left, .mc-right{position:fixed;bottom:10vh;width:45%;height:40vh;pointer-events:auto}
+.mc-left{left:2%;display:flex;align-items:flex-end;justify-content:flex-start}
+.mc-right{right:2%;display:flex;align-items:flex-end;justify-content:flex-end}
+.mc-joystick, .mc-buttons{display:flex;gap:12px;align-items:center}
+.mc-joystick .btn, .mc-buttons .btn{width:72px;height:72px;border-radius:999px;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:18px;border:2px solid rgba(255,255,255,0.06)}
+.mc-joystick{flex-direction:column;padding-left:6px;padding-bottom:6px}
+.mc-joystick .dirs{display:grid;grid-template-columns:repeat(3,72px);grid-template-rows:repeat(3,72px);gap:12px}
+.btn.small{width:54px;height:54px;font-size:16px}
+.mc-right .mc-actions{display:flex;flex-direction:column;gap:12px}
+#mc-toggle{position:fixed;left:50%;transform:translateX(-50%);bottom:6vh;background:rgba(6,182,212,0.95);color:#012; padding:.45rem .75rem;border-radius:999px;font-weight:700;border:none;pointer-events:auto}
+/* hide controls on desktop */
+@media (min-width:900px){#mobile-controls{display:none}}
